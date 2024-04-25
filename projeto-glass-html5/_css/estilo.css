@@ -93,9 +93,9 @@ nav#menu ul {
 }
 nav#menu li {
   display: inline-block;
-  background-color: gray;
-  padding: 10;
-  margin: 2;
+  background-color: gray; 
+  padding: 5px;
+  margin: 2px;
   transition: background-color 1s;
 }
 nav#menu li:hover {
