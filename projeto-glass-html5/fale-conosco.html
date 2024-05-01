@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="_css/form.css" />
   </head>
   <script language="javascript" src="_javascript/funcoes.js"></script>
+  <script>
+    function calc_total() {
+      var qtd = parseInt(document.getElementById('cQtd').value);
+      tot = qtd * 1500;
+      document.getElementById('cTot').value = tot;
+    }
+  </script>
   <body>
     <div id="interface">
       <header id="cabecalho">
@@ -61,8 +68,8 @@
           </header>
         </article>
       </section>
-      <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com">
-        <fieldset>
+      <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com" oninput="calc_total();">
+        <fieldset id="usuario">
           <legend id="usuario">Identificação do Usuário</legend>
           <p>
             <label for="cNome">Nome:</label>
@@ -174,28 +181,16 @@
         <fieldset id="mensagem">
           <legend>Mensagem do Usuário</legend>
           <p><label for="cUrg">Grau de Urgência: Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</label> </p> 
-          <p><label for="cMsg">Mensagem: <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></label> </p>
+          <p><label for="cMsg">Mensagem: <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></label> </p>
         </fieldset>
         <fieldset id="pedido">
           <legend>Quero um Google Glass</legend>
-          Gostaria de adquirir um Google Glass quando disponível 
-          <p><label for="">Cor: <select><color><option>
-            <option value="Azul">Azul</option>
-            <option value="Verde">Verde</option>
-            <option value="Vermelho">Vermelho</option>
-            <option value="Amarelo">Amarelo</option>
-            <option value="Preto">Preto</option>
-            <option value="Branco">Branco</option>
-            <option value="Cinza">Cinza</option>
-            <option value="Rosa">Rosa</option>
-            <option value="Laranja">Laranja</option>
-            <option value="Roxo">Roxo</option>
-            <option value="Marrom">Marrom</option>
-          </option></color></select></label></p>
-          <p><label for="">Quantidade: <input type="text"></label></p> 
-          <p><label for="">Preço Total: <input type="text"></label></p> R$
+          <p><input type="checkbox" name="tPed" id="cPed" checked><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p> 
+          <p><label for="cCor">Cor: <input type="color" name="tCor" id="cCor" value="#0000FF"></label></p>
+          <p><label for="">Quantidade: <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></label></p> 
+          <p><label for="">Preço Total: R$</label><input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
         </fieldset>
-        [BOTÃO ENVIAR]
+        <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
       </form>
       <footer id="rodape">
         <p>
