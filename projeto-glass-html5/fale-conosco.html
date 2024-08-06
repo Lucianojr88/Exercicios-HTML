@@ -9,9 +9,9 @@
   <script language="javascript" src="_javascript/funcoes.js"></script>
   <script>
     function calc_total() {
-      var qtd = parseInt(document.getElementById('cQtd').value);
-      tot = qtd * 1500;
-      document.getElementById('cTot').value = tot;
+      var qtd = parseInt(document.getElementById("cQtd").value)
+      tot = qtd * 1500
+      document.getElementById("cTot").value = tot
     }
   </script>
   <body>
@@ -68,7 +68,12 @@
           </header>
         </article>
       </section>
-      <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com" oninput="calc_total();">
+      <form
+        method="post"
+        id="fContato"
+        action="mailto:contato@cursoemvideo.com"
+        oninput="calc_total();"
+      >
         <fieldset id="usuario">
           <legend id="usuario">Identificação do Usuário</legend>
           <p>
@@ -123,74 +128,152 @@
         </fieldset>
         <fieldset id="endereco">
           <legend>Endereço do Usuário</legend>
-         <p><label for="cRua">Logradouro: </label> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Travessa"></p> 
-         <p><label for="cNum">Número: </label> <input type="number" name="tNum" id="cNum" min="0" max="99999"></p> 
-         <p><label for="cEst">Estado: </label> <select name="tEst" id="cEst">
-           <option value="AC">Acre</option>
-           <option value="AL">Alagoas</option>
-           <option value="AP">Amapá</option>
-           <option value="AM">Amazonas</option>
-           <option value="BA">Bahia</option>
-           <option value="CE">Ceará</option>
-           <option value="DF">Distrito Federal</option>
-           <option value="ES">Espírito Santo</option>
-           <option value="GO">Goiás</option>
-           <option value="MA">Maranhão</option>
-           <option value="MT">Mato Grosso</option>
-           <option value="MS">Mato Grosso do Sul</option>
-           <option value="MG">Minas Gerais</option>
-           <option value="PA">Pará</option>
-           <option value="PB">Paraíba</option>
-           <option value="PR">Paraná</option>
-           <option value="PE">Pernambuco</option>
-           <option value="PI">Piauí</option>
-           <option value="RJ">Rio de Janeiro</option>
-           <option value="RN">Rio Grande do Norte</option>
-           <option value="RS">Rio Grande do Sul</option>
-           <option value="RO">Rondônia</option>
-           <option value="RR">Roraima</option>
-           <option value="SC">Santa Catarina</option>
-           <option value="SP">São Paulo</option>
-           <option value="SE">Sergipe</option>
-           <option value="TO">Tocantins</option>
-         </select></p> 
-         <p><label for="cCid">Cidade: </label> <input type="text" name="tCid" id="cCid" size="20" maxlength="40" placeholder="Sua Cidade" list="cidades">
-        <datalist id="cidades"> 
-          <option value="Salvador"></option>
-          <option value="Rio de Janeiro"></option>
-          <option value="São Paulo"></option>
-          <option value="Minas Belo Horizonte"></option>
-          <option value="Curitiba"></option>
-          <option value="Porto Alegre"></option>
-          <option value="Florianópolis"></option>
-          <option value="Belém"></option>
-          <option value="Natal"></option>
-          <option value="Vitória"></option>
-          <option value="Goiânia"></option>
-          <option value="São Luís"></option>
-          <option value="Cuiabá"></option>
-          <option value="Campo Grande"></option>
-          <option value="Rio Branco"></option>
-          <option value="Macapá"></option>
-          <option value="Manaus"></option>
-          <option value="Porto Velho"></option>
-          <option value="Boa Vista"></option>
-          <option value="Palmas"></option>
-        </datalist> </p>
+          <p>
+            <label for="cRua">Logradouro: </label>
+            <input
+              type="text"
+              name="tRua"
+              id="cRua"
+              size="13"
+              maxlength="80"
+              placeholder="Rua, Av, Travessa"
+            />
+          </p>
+          <p>
+            <label for="cNum">Número: </label>
+            <input type="number" name="tNum" id="cNum" min="0" max="99999" />
+          </p>
+          <p>
+            <label for="cEst">Estado: </label>
+            <select name="tEst" id="cEst">
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </p>
+          <p>
+            <label for="cCid">Cidade: </label>
+            <input
+              type="text"
+              name="tCid"
+              id="cCid"
+              size="20"
+              maxlength="40"
+              placeholder="Sua Cidade"
+              list="cidades"
+            />
+            <datalist id="cidades">
+              <option value="Salvador"></option>
+              <option value="Rio de Janeiro"></option>
+              <option value="São Paulo"></option>
+              <option value="Minas Belo Horizonte"></option>
+              <option value="Curitiba"></option>
+              <option value="Porto Alegre"></option>
+              <option value="Florianópolis"></option>
+              <option value="Belém"></option>
+              <option value="Natal"></option>
+              <option value="Vitória"></option>
+              <option value="Goiânia"></option>
+              <option value="São Luís"></option>
+              <option value="Cuiabá"></option>
+              <option value="Campo Grande"></option>
+              <option value="Rio Branco"></option>
+              <option value="Macapá"></option>
+              <option value="Manaus"></option>
+              <option value="Porto Velho"></option>
+              <option value="Boa Vista"></option>
+              <option value="Palmas"></option>
+            </datalist>
+          </p>
         </fieldset>
         <fieldset id="mensagem">
           <legend>Mensagem do Usuário</legend>
-          <p><label for="cUrg">Grau de Urgência: Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</label> </p> 
-          <p><label for="cMsg">Mensagem: <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></label> </p>
+          <p>
+            <label for="cUrg"
+              >Grau de Urgência: Min<input
+                type="range"
+                name="tUrg"
+                id="cUrg"
+                min="0"
+                max="10"
+                step="2"
+              />Máx</label
+            >
+          </p>
+          <p>
+            <label for="cMsg"
+              >Mensagem:
+              <textarea
+                name="tMsg"
+                id="cMsg"
+                cols="35"
+                rows="5"
+                placeholder="Deixe aqui sua mensagem"
+              ></textarea>
+            </label>
+          </p>
         </fieldset>
         <fieldset id="pedido">
           <legend>Quero um Google Glass</legend>
-          <p><input type="checkbox" name="tPed" id="cPed" checked><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p> 
-          <p><label for="cCor">Cor: <input type="color" name="tCor" id="cCor" value="#0000FF"></label></p>
-          <p><label for="">Quantidade: <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></label></p> 
-          <p><label for="">Preço Total: R$</label><input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+          <p>
+            <input type="checkbox" name="tPed" id="cPed" checked /><label
+              for="cPed"
+              >Gostaria de adquirir um Google Glass quando disponível</label
+            >
+          </p>
+          <p>
+            <label for="cCor"
+              >Cor: <input type="color" name="tCor" id="cCor" value="#0000FF"
+            /></label>
+          </p>
+          <p>
+            <label for=""
+              >Quantidade:
+              <input
+                type="number"
+                name="tQtd"
+                id="cQtd"
+                min="0"
+                max="5"
+                value="0"
+            /></label>
+          </p>
+          <p>
+            <label for="">Preço Total: R$</label
+            ><input
+              type="text"
+              name="tTot"
+              id="cTot"
+              placeholder="Total a pagar"
+              readonly
+            />
+          </p>
         </fieldset>
-        <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+        <input type="image" name="tEnviar" src="_imagens/botao-enviar.png" />
       </form>
       <footer id="rodape">
         <p>
