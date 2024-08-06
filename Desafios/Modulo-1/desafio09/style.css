@@ -63,3 +63,7 @@ a {
   align-items: center;
   text-align: center;
 }
+.button a:hover{
+  color: #628ee1;
+  transition: all 0.3s;
+}
